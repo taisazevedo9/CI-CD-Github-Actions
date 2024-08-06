@@ -1,0 +1,12 @@
+name: "CI (Integração Continua): Main Workflow"
+on:
+  pull_request:
+    types: [opened,synchronize]  
+# Definindo o que queremos executar    
+jobs:
+  linter:  
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Linter
+        run: npm run lint 
