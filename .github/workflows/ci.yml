@@ -8,5 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Run Installation
+        run: npm install -y
       - name: Run Linter
-        run: npm run lint 
+        run: npm run lint   
